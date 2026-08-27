@@ -1,0 +1,4 @@
+Instalar en VSC la extensión live server 
+by Ritwick Dey
+
+para ver los cambios web y ejecutar JS, sin ir al navegador o correr el codigo
