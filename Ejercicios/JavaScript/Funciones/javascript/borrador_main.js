@@ -1,4 +1,6 @@
-// funcion calcular velocidad de un objeto
+// Borradores de las funciones antes de plenaria con consejos para hacer más claro al código
+
+//funcion calcular velocidad de un objeto
 // funcion normal 
 
 function speedFunction(distance, time){
