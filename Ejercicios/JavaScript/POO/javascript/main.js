@@ -1,3 +1,8 @@
+let envio = 59; 
+let descuentoPro = 0.05; 
+let envioGratisRegular = 299.99; 
+let envioGratisPRO = 199.99; 
+
 // Definición de la clase Persona
 class Persona {
 // PROPIEDADES DE LA CLASE
@@ -8,7 +13,7 @@ class Persona {
 
     constructor (id, nombre, email){
         this.id = id; 
-        this.nombre = nombre.toUpperCase() ; 
+        this.nombre = nombre; 
         this.email = email; 
         this.carrito = [];
     }// constructor
@@ -30,7 +35,7 @@ class Persona {
         productos.forEach((producto) => this.carrito.push(producto));
     }// agregar multiples productos
 
-calcularTotal() {
+    calcularTotal() {
     let total = 0;
     this.carrito.forEach((producto) => { total = total + producto.precio });
     return total;
@@ -50,8 +55,8 @@ class Usuario extends Persona {
     calcularTotal (){
         const subTotal = super.calcularTotal(); 
         let totalRegular = 0; 
-        if (subTotal <= 299.99){
-            totalRegular = subTotal + 59; 
+        if (subTotal <= envioGratisRegular){
+            totalRegular = subTotal + envio; 
         } else {
             totalRegular = subTotal 
         }; 
@@ -71,9 +76,9 @@ class UsuarioPRO extends Persona {
     calcularTotal(){
         const subTotalPRO = super.calcularTotal(); 
         let totalPRO = 0; 
-        totalPRO = subTotalPRO - (subTotalPRO*0.05);
-        if (subTotalPRO <= 199.99){
-            totalPRO = totalPRO + 59; 
+        totalPRO = subTotalPRO - (subTotalPRO*descuentoPro);
+        if (subTotalPRO <= envioGratisPRO){
+            totalPRO = totalPRO + envio; 
         } 
         return totalPRO; 
 
@@ -83,36 +88,28 @@ class UsuarioPRO extends Persona {
 
 
 class Main {
-    static ejecutar() {
-        // prueba Persona
-        const julia = new Persona (124, "Julia Ramírez", "julia@gmail.com"); 
-        julia.agregarMultiplesProductos([
-            { producto: "hamburguesa", precio: 70 },
-            { producto: "coca-cola", precio: 25 },
-            { producto: "galleta", precio: 15 }
-        ]); // cuidar que sea un array 
-
+    static main() {
         // crear y probar usuario regular 
-        const unUsuarioRegular = new Usuario (345, "Liz", "lzthdg@outlook.com"); 
+        const unUsuarioRegular = new Usuario (345, "Gustavo Ignacio Sardinas", "sardinacio@outlook.com"); 
         unUsuarioRegular.agregarMultiplesProductos([{producto: "hamburguesas", precio: 200},{producto: "coca-cola", precio: 25}]);
 
         // crear y probar usuario pro
-        const unUsuarioProo = new UsuarioPRO (567, "Maiceno", "maiceno@gmail.com"); 
+        const unUsuarioProo = new UsuarioPRO (567, "Maiceno Dog", "maiceno@gmail.com"); 
         unUsuarioProo.agregarMultiplesProductos([{producto: "hamburguesas", precio: 200},{producto: "coca-cola", precio: 25}]);
 
         // mostrar resultados
         //usuario regular 
         console.log("-----usuario regular-----"); 
-        unUsuarioRegular.mostrarDatos(); 
+        console.log(unUsuarioRegular);
         console.log(`su total es: $${unUsuarioRegular.calcularTotal()} MXN, su pedido es: `, unUsuarioRegular.carrito);
 
         //usuario pro
         console.log("----usuario PRO------"); 
-        unUsuarioProo.mostrarDatos(); 
+        console.log(unUsuarioProo); 
         console.log(`su total es: $${unUsuarioProo.calcularTotal()} MXN, su pedido es: `, unUsuarioProo.carrito); 
 
     }
 }//clase main
 
-Main.ejecutar();
+Main.main();
 
