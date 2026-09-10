@@ -1,0 +1,23 @@
+.tarjeta{
+    background-color: darkmagenta;
+    text-align: center;
+    font-style: italic;
+    font-size: medium;
+}
+
+h1{
+    color: thistle;
+}
+
+h2{
+    color: honeydew;
+
+}
+
+p{
+    color: wheat;
+}
+
+img{
+    width: 300px
+}
