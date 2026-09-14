@@ -1,0 +1,23 @@
+/*Pseudoclases
+permie seleccionar el elemento según un estado o condición
+selector:pseudoclase{
+        propiedad: valor
+}
+*/
+
+button{
+    background-color: blue;
+    color: aliceblue;
+}
+
+button:hover{
+    background-color: blueviolet;
+}
+
+button:active{
+    transform: scale(0.95);
+}
+
+input:focus{
+    border: 4px solid blue;
+}

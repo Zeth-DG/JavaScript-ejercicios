@@ -1,0 +1,36 @@
+.myWebSite{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    "header header header"
+    "menu contenido contenido"
+    "footer footer footer";
+    gap: 20px;
+    text-align: center;
+}
+
+header{
+    grid-area: header;
+}
+
+aside{
+    grid-area: menu;
+}
+
+main{
+    grid-area: contenido;
+}
+
+footer{
+    grid-area: footer;
+}
+
+.part1{
+    border: 2px solid palevioletred;
+    padding: 20px;
+}
+
+.part{
+    border: 2px solid palevioletred;
+    padding: 250px;
+}

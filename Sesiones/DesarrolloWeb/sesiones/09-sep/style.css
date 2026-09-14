@@ -1,0 +1,47 @@
+/*Selectores*/
+/* De elemento o etiqueta */
+p{
+    color: beige;
+}
+
+/* De clase: para secciones más amplias */
+.sobre_mi{
+    color: blueviolet;
+}
+
+/* De ID: usar para ciertos elementos */
+#titulo{
+    color: teal;
+}
+
+/* Universal*/
+*{
+    margin: 5;
+}
+
+/* Agrupados*/
+h1, h2, h6{
+    color: springgreen;
+}
+
+/*Propiedades comúnes*/
+h1{
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+
+p{
+    color: aliceblue;    
+    background-color: black;
+}
+
+
+body{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.IMG2{
+    width: 300px;
+    height: 200px;
+}

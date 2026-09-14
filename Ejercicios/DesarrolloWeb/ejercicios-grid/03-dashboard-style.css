@@ -1,0 +1,19 @@
+.dashboard{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.section{
+    border: 2px solid purple;
+    text-align: center;
+    padding: 25px;
+    margin: 20px;
+    font-family: Ballet;
+    font-size: xxx-large;
+}
+
+.section:hover{
+    background-color: lightcoral;
+    transform: scale(0.95);
+}
