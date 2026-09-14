@@ -1,0 +1,26 @@
+.primerContenedor{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /*opcion 1*/
+    gap: 10px;
+    background-color: aqua;
+}
+
+.segundoContenedor{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    background-color: blueviolet;
+}
+
+.tercerContenedor{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    background-color: chartreuse;
+
+}
+
+.item{
+    border: 2px solid black;
+    margin: 10px;
+}
